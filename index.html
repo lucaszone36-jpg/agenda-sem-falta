@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Agenda sem falta</title>
+<meta name="description" content="Lembrete, confirmação e remarcação de consultas pelo WhatsApp para clínicas de Curitiba. Medimos a sua taxa de falta antes e depois.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="topo"><a href="index.html" class="marca">vitrine local</a><span>Curitiba · clínicas e consultórios</span></header>
+
+<section class="hero"><div class="faixa duas">
+  <div>
+    <h1>Agenda sem falta</h1>
+    <p class="lead">Na véspera, cada paciente recebe a mensagem da clínica no WhatsApp e responde 1 para confirmar, 2 para remarcar ou 3 para cancelar. O horário liberado volta para a agenda sem a recepção ligar para ninguém.</p>
+    <a class="botao" href="diagnostico.html">Calcular quanto a falta custa</a>
+    <a class="botao sec" href="#demo">Ver o fluxo funcionando</a>
+  </div>
+  <div class="conversa" aria-label="Exemplo de conversa (simulação)">
+    <p>Olá, Ana. Aqui é a clínica.
+Lembrete: sua consulta é amanhã às 08:30 com a Dra. Clara.
+Responda 1 para confirmar, 2 para remarcar, 3 para cancelar.</p>
+    <p class="pac">2</p>
+    <p>Tenho estes horários amanhã:
+1) 10:00  2) 15:30  3) 17:00</p>
+    <p class="pac">2</p>
+    <p>Pronto. Sua consulta passou para as 15:30.</p>
+    <small style="color:var(--prata)">Simulação com paciente fictícia.</small>
+  </div>
+</div></section>
+
+<main class="faixa">
+  <h2>Por que vale olhar para isso</h2>
+  <ul class="lista-x">
+    <li><b>Lembrete com resposta reduz falta.</b> Na revisão Cochrane de 7 estudos, o comparecimento subiu de 67,8% para 78,6% com lembrete por mensagem no celular. <a href="https://pubmed.ncbi.nlm.nih.gov/24310741/">Fonte</a></li>
+    <li><b>Funciona por WhatsApp no Brasil.</b> Na rede estadual do Ceará, a falta em consultas ambulatoriais foi de 35,5% (2024) para 23,2% (mar–ago/2025) depois dos lembretes. <a href="https://mais.opovo.com.br/jornal/cidades/2025/12/02/faltas-de-pacientes-a-consultas-em-hospitais-do-ceara-caem-12-apos-lembretes-por-whatsapp.html">Fonte</a></li>
+    <li><b>É dor comum.</b> 48% dos profissionais citam a falta como um dos principais desafios de gestão (Doctoralia, Panorama 2024). <a href="https://medicinasa.com.br/?p=90920">Fonte</a></li>
+  </ul>
+  <p class="miudo">Resultado de estudo não é promessa para a sua clínica. Por isso o primeiro passo é medir a sua taxa de falta e comparar depois de 30 dias.</p>
+
+  <h2 id="demo" style="margin-top:44px">Como funciona</h2>
+  <div class="passos">
+    <div><b>1</b><strong>Lembrete na véspera</strong><br>No horário que você escolher, o fluxo lê a agenda e envia a mensagem com o nome, o dia e a hora.</div>
+    <div><b>2</b><strong>Paciente responde</strong><br>1 confirma. 2 recebe os horários livres e escolhe. 3 cancela e libera a vaga. Outra pergunta vai para a recepção.</div>
+    <div><b>3</b><strong>Agenda e número</strong><br>A agenda se atualiza sozinha. No fim do mês você recebe a taxa de falta, de confirmação e de remarcação.</div>
+  </div>
+  <video src="demo-agenda-sem-falta.mp4" poster="demo-capa.jpg" controls muted playsinline preload="metadata" style="width:100%;margin-top:20px;background:var(--noite)" aria-label="Vídeo da demonstração do fluxo, com pacientes fictícios"></video>
+  <p class="miudo">Vídeo gravado no ambiente de teste, com pacientes e telefones inventados.</p>
+
+  <h2 style="margin-top:44px">Planos</h2>
+  <div class="planos">
+    <div class="plano">
+      <h3>Lembrete</h3>
+      <p class="preco">R$ 290 <small>por mês</small></p>
+      <p class="miudo">Implantação: R$ 490, uma vez.</p>
+      <ul>
+        <li>Lembrete na véspera com confirmação, remarcação e cancelamento</li>
+        <li>Ligação com a sua agenda (Google Agenda ou o sistema que você usa, quando houver integração)</li>
+        <li>Relatório mensal da taxa de falta</li>
+        <li>Ajuste do texto das mensagens com você</li>
+      </ul>
+    </div>
+    <div class="plano">
+      <h3>Lembrete + atendimento</h3>
+      <p class="preco">R$ 790 <small>por mês</small></p>
+      <p class="miudo">Implantação: R$ 490, uma vez.</p>
+      <ul>
+        <li>Tudo do plano Lembrete</li>
+        <li>Atendente automático que responde dúvidas frequentes (endereço, horários, convênios) com o texto aprovado por você</li>
+        <li>Lista de espera: vaga liberada é oferecida a quem pediu encaixe</li>
+        <li>Revisão mensal das conversas com a recepção</li>
+      </ul>
+    </div>
+  </div>
+  <p class="miudo">O custo das mensagens cobrado pela Meta na API oficial do WhatsApp é pago pela clínica, direto à Meta, e mostrado antes de começar. Sem fidelidade: você sai com 30 dias de aviso. Nada vai ao ar sem a sua aprovação do texto.</p>
+
+  <h2 style="margin-top:44px">Dados dos pacientes</h2>
+  <ul class="lista-x">
+    <li>A mensagem leva só nome, dia, hora e profissional. Nada de diagnóstico ou procedimento.</li>
+    <li>A clínica é a controladora dos dados; nós tratamos só o necessário para enviar o lembrete, com contrato de operador (LGPD).</li>
+    <li>O paciente pode pedir para não receber mais as mensagens a qualquer momento.</li>
+    <li>Os registros guardam o status da consulta, não o conteúdo de saúde.</li>
+  </ul>
+
+  <section class="cta">
+    <h2>Comece pelo diagnóstico grátis</h2>
+    <p>Me diga quantas consultas teve e quantas faltaram no mês passado. Devolvo a conta e mostro o fluxo rodando com a sua agenda de exemplo.</p>
+    <a class="botao" href="https://wa.me/5541988398608?text=Quero%20o%20diagn%C3%B3stico%20de%20faltas" rel="noopener">Falar no WhatsApp (41) 98839-8608</a>
+  </section>
+</main>
+<footer class="rodape">Vitrine Local · Lucas Santos, Curitiba-PR. Esta página não coleta dados nem usa cookies. Textos e imagens preparados com apoio de IA e revisados por pessoa.</footer>
+</body>
+</html>

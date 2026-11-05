@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Diagnóstico de faltas</title>
+<meta name="description" content="Calcule quanto a sua clínica deixa de faturar com pacientes que faltam. Cada número tem fonte.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wdth,wght@75..100,400..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+<header class="topo"><a href="index.html" class="marca">vitrine local</a><span>Diagnóstico grátis de faltas</span></header>
+<main class="faixa">
+  <h1>Quanto a sua agenda perde com falta</h1>
+  <p class="lead">Coloque os números do último mês. A conta roda só no seu navegador: nada é enviado nem salvo.</p>
+
+  <div class="calc">
+    <form id="f" class="campos">
+      <label>Consultas agendadas no mês<input id="ag" type="number" min="1" value="200" inputmode="numeric"></label>
+      <label>Quantas faltaram sem avisar<input id="fa" type="number" min="0" value="30" inputmode="numeric"><small>Exemplo. Use o seu número: está na agenda ou no sistema.</small></label>
+      <label>Valor médio de uma consulta (R$)<input id="tk" type="number" min="1" value="200" inputmode="numeric"></label>
+      <label>Mensalidade do serviço que você está avaliando (R$)<input id="ms" type="number" min="0" value="290" inputmode="numeric"><small>Planos da Vitrine Local: R$ 290 a R$ 790 por mês.</small></label>
+    </form>
+
+    <div class="resultado" aria-live="polite">
+      <div class="big"><span>Taxa de falta</span><b id="r-taxa">–</b></div>
+      <div class="big"><span>Deixa de faturar por mês</span><b id="r-mes">–</b></div>
+      <div class="big"><span>Em 12 meses</span><b id="r-ano">–</b></div>
+      <hr>
+      <p class="cen"><b>Se a falta cair como nos estudos</b> (cerca de 1/3 a menos <a href="#f1">[1]</a> <a href="#f2">[2]</a>): <span id="r-est">–</span></p>
+      <p class="cen"><b>Cenário prudente</b> (metade desse efeito): <span id="r-pru">–</span></p>
+      <p class="cen"><b>Ponto de equilíbrio:</b> <span id="r-eq">–</span></p>
+      <p class="aviso">Isto é uma estimativa, não uma promessa. O efeito real depende do seu público, da agenda e de quantos horários liberados você consegue preencher. Por isso medimos a sua taxa antes e depois.</p>
+    </div>
+  </div>
+
+  <section class="fontes">
+    <h2>De onde vêm os números</h2>
+    <ol>
+      <li id="f1"><b>Revisão Cochrane (Car e outros, 2013), 7 estudos, 5.841 pessoas:</b> o comparecimento foi de 67,8% sem lembrete para 78,6% com lembrete por mensagem no celular (RR 1,14; IC 95% 1,03–1,26). A falta caiu de 32,2% para 21,4%, cerca de 1/3. Evidência de qualidade moderada. <a href="https://pubmed.ncbi.nlm.nih.gov/24310741/" rel="noopener">pubmed.ncbi.nlm.nih.gov/24310741</a></li>
+      <li id="f2"><b>Rede estadual do Ceará (Sesa, dados ao jornal O Povo, 02/12/2025):</b> a falta em consultas ambulatoriais foi de 35,5% em 2024 para 23,2% entre março e agosto de 2025, depois dos lembretes por WhatsApp. São 12,3 pontos a menos, cerca de 35% em termos relativos. Não é um ensaio controlado. <a href="https://mais.opovo.com.br/jornal/cidades/2025/12/02/faltas-de-pacientes-a-consultas-em-hospitais-do-ceara-caem-12-apos-lembretes-por-whatsapp.html" rel="noopener">mais.opovo.com.br</a></li>
+      <li id="f3"><b>Quanto se falta no Brasil:</b> os estudos variam muito por serviço. Em uma UBS do Sul, 19,2% de 3.131 consultas <a href="https://oasisbr.ibict.br/vufind/Record/SBMFC-1_2023c8bf46c63e0d0dbf2283360fc23f" rel="noopener">(oasisbr)</a>; em um hospital universitário paulista, 20,06% <a href="https://periodicos.saude.sp.gov.br/BEPA182/article/download/38075/35945" rel="noopener">(BEPA)</a>; na região metropolitana do Espírito Santo, 38,6% de 666.182 consultas <a href="https://doaj.org/article/74ea771cefe54732b220643031e82212" rel="noopener">(Saúde em Debate, 2020)</a>. São dados do SUS: consultório particular costuma ter taxa diferente. Use o seu número.</li>
+      <li id="f4"><b>É um problema para quem atende:</b> 48% dos profissionais apontaram a falta como um dos principais desafios de gestão no Panorama das Clínicas e Hospitais 2024 da Doctoralia. Quase 70% das instituições confirmam consulta por telefone. <a href="https://medicinasa.com.br/?p=90920" rel="noopener">medicinasa.com.br</a></li>
+    </ol>
+    <p class="nota">Como fazemos a conta: faltas ÷ agendadas = taxa. Faltas × valor da consulta = quanto deixa de faturar. Faltas evitadas = faltas × redução do cenário. Ponto de equilíbrio = mensalidade ÷ valor da consulta. A conta supõe que o horário liberado por quem cancela antes é preenchido ou que o paciente confirmado comparece; nem todo horário é recuperado.</p>
+  </section>
+
+  <section class="cta">
+    <h2>Quer o diagnóstico com o seu número?</h2>
+    <p>Me diga quantas consultas teve e quantas faltaram no mês passado. Devolvo a conta e mostro o fluxo funcionando, sem compromisso.</p>
+    <a class="botao" href="https://wa.me/5541988398608?text=Quero%20o%20diagn%C3%B3stico%20de%20faltas" rel="noopener">Falar no WhatsApp (41) 98839-8608</a>
+  </section>
+</main>
+<footer class="rodape">Vitrine Local · Lucas Santos, Curitiba. Esta página não coleta dados. Conteúdo revisado com apoio de IA.</footer>
+<script>
+const $=id=>document.getElementById(id);
+const brl=v=>v.toLocaleString('pt-BR',{style:'currency',currency:'BRL',maximumFractionDigits:0});
+function calc(){
+  const ag=+$('ag').value||0, fa=Math.min(+$('fa').value||0,ag), tk=+$('tk').value||0, ms=+$('ms').value||0;
+  if(!ag){return}
+  const taxa=fa/ag, mes=fa*tk;
+  $('r-taxa').textContent=(taxa*100).toLocaleString('pt-BR',{maximumFractionDigits:1})+'%';
+  $('r-mes').textContent=brl(mes); $('r-ano').textContent=brl(mes*12);
+  const est=Math.round(fa*0.33), pru=Math.round(fa*0.165);
+  $('r-est').textContent=`cerca de ${est} faltas a menos por mês, ${brl(est*tk)} de volta na agenda.`;
+  $('r-pru').textContent=`cerca de ${pru} faltas a menos, ${brl(pru*tk)} por mês.`;
+  const eq=tk?Math.ceil(ms/tk):0;
+  $('r-eq').textContent= ms? `${eq} consulta${eq>1?'s':''} recuperada${eq>1?'s':''} por mês paga${eq>1?'m':''} a mensalidade de ${brl(ms)}.` : '—';
+}
+document.querySelectorAll('input').forEach(i=>i.addEventListener('input',calc)); calc();
+</script>
+</body>
+</html>
